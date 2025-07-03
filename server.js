@@ -7,11 +7,11 @@ const userRoutes = require('./routes/user');
 const paymentRoutes = require('./routes/payment');
 const imageROutes = require('./routes/image');
 
-const app = express(); // <-- must be BEFORE app.use()
+const app = express(); // <-- THIS FIRST
 
-// Explicit global * CORS
 app.use(cors({
-  origin: '*'
+  origin: ['https://cleanmybg.com', 'https://www.cleanmybg.com'],
+  credentials: true // If you use cookies, else remove this line
 }));
 
 app.use(express.json());
