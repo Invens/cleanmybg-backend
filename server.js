@@ -7,7 +7,7 @@ const userRoutes = require('./routes/user');
 const paymentRoutes = require('./routes/payment');
 const imageROutes = require('./routes/image');
 
-const app = express();
+const app = express(); // <-- must be BEFORE app.use()
 
 // Explicit global * CORS
 app.use(cors({
