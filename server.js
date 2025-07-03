@@ -8,7 +8,12 @@ const paymentRoutes = require('./routes/payment');
 const imageROutes = require('./routes/image');
 
 const app = express();
-app.use(cors());
+
+// Allow only cleanmybg.com and www.cleanmybg.com
+app.use(cors({
+  origin: ['https://cleanmybg.com', 'https://www.cleanmybg.com']
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
