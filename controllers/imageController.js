@@ -3,7 +3,7 @@ const FormData = require('form-data');
 const fs = require('fs');
 const { User } = require('../models');
 
-const PYTHON_SERVICE_URL = 'http://localhost:5001/remove-bg/';
+const PYTHON_SERVICE_URL = 'https://remove.cleanmybg.com/remove-bg/';
 
 const removeBackground = async (req, res) => {
   const tempPath = req.file?.path;
@@ -49,7 +49,7 @@ const removeBackground = async (req, res) => {
       console.log(`Credit deducted. User ${userId} now has ${creditsRemaining} credits`);
     }
 
-    const processedUrl = `http://localhost:5001${pyRes.data.url}`;
+    const processedUrl = `https://remove.cleanmybg.com${pyRes.data.url}`;
 
     res.json({
       status: 'success',
