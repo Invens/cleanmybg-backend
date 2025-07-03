@@ -9,9 +9,9 @@ const imageROutes = require('./routes/image');
 
 const app = express();
 
-// Allow only cleanmybg.com and www.cleanmybg.com
+// Explicit global * CORS
 app.use(cors({
-  origin: ['https://cleanmybg.com', 'https://www.cleanmybg.com']
+  origin: '*'
 }));
 
 app.use(express.json());
