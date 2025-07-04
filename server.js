@@ -22,5 +22,5 @@ app.use('/api/user', userRoutes);
 app.use('/api/payment', paymentRoutes);
 app.use('/api/image', imageROutes);
 
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3110;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
