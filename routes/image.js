@@ -8,6 +8,6 @@ const rateLimit = require('../middleware/rateLimit');
 
 const upload = multer({ dest: path.join(__dirname, '../temp') });
 
-router.post('/remove',optionalAuth, rateLimit,  upload.single('image'), removeBackground);
+router.post('/remove', rateLimit,  upload.single('image'), removeBackground);
 
 module.exports = router;
